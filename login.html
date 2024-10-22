@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+   
+    <form class="col-sm-7 m-auto mt-5">
+        <h3 class="text-center">Login form</h3>
+      
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+      
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password">
+        </div>
+
+     
+    
+        <button type="submit" onclick="submitHandler(event)" class="btn btn-primary">Submit</button>
+
+        <p class="text-center mt-3">Dont't have an account ? <a href="signup.html">register</a></p>
+      </form>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+    
+        let emailInput = document.querySelector('#email')
+        let passwordInput = document.querySelector('#password')
+       
+
+    
+        console.log(emailInput)
+        console.log(passwordInput)
+     
+
+        const submitHandler= (e)=>{
+            e.preventDefault()
+            console.log("hello")
+   
+
+            let obj = {
+                email:emailInput.value,
+                password: passwordInput.value,
+            }
+            console.log(obj)
+
+            let value = false
+            for(let i=0 ; i<arr.length; i ++){
+              if(arr[i].email===obj.email && arr[i].password===obj.password){
+                  value = true
+                  break;
+              }
+             
+            }
+
+            if(value===true){
+              console.log("welcome")
+              alert("account login successfull")
+            }
+            else
+            {
+              console.log("email or password is incorrect")
+            }
+
+        }
+    </script>
+
+
+</body>
+</html>
